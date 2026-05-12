@@ -3,17 +3,20 @@ import { Icon } from '../atoms/Icon';
 import { NavLink } from '../atoms/NavLink';
 
 const navLinks = [
-  { label: 'Muebles',        href: '#muebles',         sections: ['novedades', 'muebles'] },
-  { label: 'Sobre Nosotros', href: '#nuestra-historia', sections: ['nuestra-historia']     },
-  { label: 'Contáctanos',    href: '#contacto',         sections: ['contacto']             },
+  { label: 'Muebles',        href: '/#muebles',         sections: ['novedades', 'muebles'] },
+  { label: 'Sobre Nosotros', href: '/sobre-nosotros', sections: ['sobre-nosotros-page'] },
+  { label: 'Contáctanos',    href: '/#contacto',         sections: ['contacto']             },
 ];
 
 const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
+import { Link, useLocation } from 'react-router-dom';
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeHref, setActiveHref] = useState('#muebles');
+  const [activeHref, setActiveHref] = useState('/#muebles');
+  const location = useLocation();
 
   useEffect(() => {
     // Map each section id → which nav href it belongs to
@@ -42,8 +45,12 @@ export function Navbar() {
       if (el) observer.observe(el);
     });
 
+    if (location.pathname === '/sobre-nosotros') {
+      setActiveHref('/sobre-nosotros');
+    }
+
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <nav
@@ -52,9 +59,9 @@ export function Navbar() {
     >
       {/* Main bar */}
       <div className="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-20">
-        <a href="#" className="flex items-center active:scale-95 transition-transform">
+        <Link to="/" className="flex items-center active:scale-95 transition-transform">
           <img src="/logo.svg" alt="Amara Muebles" className="h-10 w-auto" />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center space-x-12">

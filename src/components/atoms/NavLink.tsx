@@ -1,4 +1,5 @@
 import { cn } from '../../lib/cn';
+import { Link } from 'react-router-dom';
 
 interface NavLinkProps {
   href?: string;
@@ -10,8 +11,8 @@ interface NavLinkProps {
 
 export function NavLink({ href = '#', active = false, children, className, onClick }: NavLinkProps) {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       onClick={onClick}
       aria-current={active ? 'page' : undefined}
       className={cn(
@@ -23,6 +24,7 @@ export function NavLink({ href = '#', active = false, children, className, onCli
       )}
     >
       {children}
-    </a>
+    </Link>
   );
 }
+

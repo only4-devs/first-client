@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Icon } from '../atoms/Icon';
 import { NavLink } from '../atoms/NavLink';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'Muebles',        href: '/#muebles',         sections: ['novedades', 'muebles'] },
+  { label: 'Muebles', href: '/#muebles', sections: ['novedades', 'muebles'] },
   { label: 'Sobre Nosotros', href: '/sobre-nosotros', sections: ['sobre-nosotros-page'] },
-  { label: 'Contáctanos',    href: '/#contacto',         sections: ['contacto']             },
+  { label: 'Contáctanos', href: '/#contacto', sections: ['contacto'] },
 ];
 
 const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
-import { Link, useLocation } from 'react-router-dom';
-
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeHref, setActiveHref] = useState('/#muebles');
+  const navigate = useNavigate();
   const location = useLocation();
+  const isCatalog = location.pathname === '/catalog';
 
   useEffect(() => {
     // Map each section id → which nav href it belongs to
@@ -80,15 +81,18 @@ export function Navbar() {
           {/* Desktop CTA */}
           <button
             type="button"
-            onClick={() => scrollTo('muebles')}
-            className="hidden md:block bg-muted text-cx-walnut px-6 py-2.5 uppercase tracking-widest text-xs font-medium transition-all duration-500 hover:opacity-70 active:scale-95"
+            onClick={() => navigate('/catalog')}
+            className={`hidden md:block px-6 py-2.5 uppercase tracking-widest text-xs font-medium transition-all duration-500 active:scale-95 ${isCatalog
+              ? 'bg-cx-walnut text-white'
+              : 'bg-muted text-cx-walnut hover:opacity-70'
+              }`}
           >
             Ver Catálogo
           </button>
           {/* Mobile hamburger */}
           <button
             type="button"
-            className="md:hidden text-foreground hover:opacity-70 transition-opacity p-1"
+            className="md:hidden text-foreground hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setMobileOpen((o) => !o)}
             aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
@@ -97,16 +101,14 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — absolutely positioned so it never affects nav height */}
       <div
-        className="md:hidden overflow-hidden bg-card border-t border-border"
+        className="md:hidden absolute top-full left-0 right-0 overflow-hidden bg-card border-t border-border transition-[opacity,transform] duration-300 ease-out"
         style={{
           opacity: mobileOpen ? 1 : 0,
-          transform: mobileOpen ? 'translateY(0)' : 'translateY(-6px)',
-          maxHeight: mobileOpen ? '400px' : '0px',
-          transitionProperty: 'opacity, transform, max-height',
-          transitionDuration: '300ms',
-          transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
+          transform: mobileOpen ? 'scaleY(1)' : 'scaleY(0)',
+          transformOrigin: 'top',
+          visibility: mobileOpen ? 'visible' : 'hidden',
         }}
       >
         <div className="flex flex-col px-6 py-6 space-y-6">
@@ -122,8 +124,14 @@ export function Navbar() {
           ))}
           <button
             type="button"
-            onClick={() => { scrollTo('muebles'); setMobileOpen(false); }}
-            className="bg-muted text-cx-walnut py-3 uppercase tracking-widest text-xs font-medium w-full hover:opacity-70 transition-opacity"
+            onClick={() => {
+              navigate('/catalog');
+              setMobileOpen(false);
+            }}
+            className={`py-3 uppercase tracking-widest text-xs font-medium w-full transition-opacity ${isCatalog
+              ? 'bg-cx-walnut text-white'
+              : 'bg-muted text-cx-walnut hover:opacity-70'
+              }`}
           >
             Ver Catálogo
           </button>

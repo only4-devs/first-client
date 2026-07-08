@@ -20,7 +20,7 @@ export const products: Product[] = [
   // ── Sofás ────────────────────────────────────────────────────────────────
   {
     id: 'sofa-amara-1',
-    name: 'Sofá Amara 1',
+    name: 'Sofá Élysée',
     description:
       'Sofá de tres plazas con estructura interna de roble boliviano, tapizado en lino natural de alta resistencia. Cojines de espuma HR de 30 kg/m³ con funda removible. Diseño de líneas limpias que se adapta a espacios contemporáneos.',
     material: 'Roble y Lino Natural',
@@ -37,7 +37,7 @@ export const products: Product[] = [
   },
   {
     id: 'sofa-amara-2',
-    name: 'Sofá Amara 2',
+    name: 'Sofá L\'Espace',
     description:
       'Sofá esquinero en L con estructura de madera maciza nacional y tapizado en tela chenilla color tierra. Doce cojines incluidos con relleno de fibra siliconada. Patas de roble en acabado natural.',
     material: 'Madera Maciza y Chenilla',
@@ -54,7 +54,7 @@ export const products: Product[] = [
   },
   {
     id: 'sofa-amara-3',
-    name: 'Sofá Amara 3',
+    name: 'Sofá Lune',
     description:
       'Sofá de dos plazas tapizado en cuero sintético de alta durabilidad color grafito. Estructura reforzada con tableros de aglomerado enchapado. Ideal para espacios reducidos sin sacrificar estilo.',
     material: 'Cuero Sintético Premium',
@@ -73,7 +73,7 @@ export const products: Product[] = [
   // ── Comedores ─────────────────────────────────────────────────────────────
   {
     id: 'comedor-amara-1',
-    name: 'Comedor Amara 1',
+    name: 'Comedor Imperial Velvet',
     description:
       'Juego de comedor para seis personas con mesa de vidrio templado de 10 mm y seis sillas tapizadas en cuero sintético negro. Base de la mesa en acero pintado negro mate. Elegancia minimalista para el hogar moderno.',
     material: 'Vidrio Templado y Acero Negro Mate',
@@ -90,7 +90,7 @@ export const products: Product[] = [
   },
   {
     id: 'comedor-amara-2',
-    name: 'Comedor Amara 2',
+    name: 'Comedor Nórdico Arena',
     description:
       'Conjunto rústico para ocho personas en madera de cedro boliviano barnizado en tono miel. Sillas con respaldo de tablillas y asiento tapizado en cuero genuino. Resistencia y calidez para reuniones familiares.',
     material: 'Cedro Boliviano Barnizado',
@@ -108,7 +108,7 @@ export const products: Product[] = [
   },
   {
     id: 'comedor-amara-3',
-    name: 'Comedor Amara 3',
+    name: 'Comedor Ejecutivo Grafito',
     description:
       'Comedor contemporáneo para seis personas con tablero en mármol sintético blanco Carrara y seis sillas de roble macizo tapizadas en bouclé beige. Diseño de alto impacto visual para comedores sofisticados.',
     material: 'Mármol Sintético y Roble Macizo',
@@ -125,7 +125,7 @@ export const products: Product[] = [
   },
   {
     id: 'comedor-amara-4',
-    name: 'Comedor Amara 4',
+    name: 'Comedor Valle Claro',
     description:
       'Juego de comedor industrial para seis personas con mesa de tablero en roble vaporizado y patas de hierro forjado negro. Sillas con asiento en cuero y respaldo de metal perforado. Estética urbana y robustez artesanal.',
     material: 'Roble Vaporizado y Hierro Forjado',
@@ -144,7 +144,7 @@ export const products: Product[] = [
   // ── Mesas ─────────────────────────────────────────────────────────────────
   {
     id: 'mesa-amara-1',
-    name: 'Mesa Amara 1',
+    name: 'Mesa de Centro Retícula',
     description:
       'Mesa de comedor extensible en madera de cedro boliviano de primera calidad. Sistema de extensión de alas que amplía la capacidad de 6 a 10 comensales. Acabado natural mate con veta pronunciada y resistente.',
     material: 'Cedro Boliviano',
@@ -161,7 +161,7 @@ export const products: Product[] = [
   },
   {
     id: 'mesa-amara-2',
-    name: 'Mesa Amara 2',
+    name: 'Mesa Pilar',
     description:
       'Mesa de comedor circular con tablero de cedro boliviano de 36 mm de espesor y base central en madera torneada. Capacidad para cuatro a seis comensales. Superficie tratada con barniz poliuretano de alta resistencia.',
     material: 'Cedro Boliviano',
@@ -177,7 +177,7 @@ export const products: Product[] = [
   },
   {
     id: 'mesa-amara-3',
-    name: 'Mesa Amara 3',
+    name: 'Mesa Cuadrante',
     description:
       'Mesa de centro rectangular con tablero de vidrio templado de 10 mm y base de acero inoxidable cepillado. Diseño minimalista que integra ligereza visual y durabilidad. Perfecta para salas de estar contemporáneas.',
     material: 'Vidrio Templado y Acero Inoxidable',
@@ -195,7 +195,7 @@ export const products: Product[] = [
   // ── Sillas ────────────────────────────────────────────────────────────────
   {
     id: 'silla-amara-1',
-    name: 'Silla Amara 1',
+    name: 'Silla Allure',
     description:
       'Silla de comedor en roble macizo con patas torneadas y asiento acolchado tapizado en tela antimanchas color gris perla. Estructura tratada con aceite de linaza para mayor durabilidad. Vendida por unidad.',
     material: 'Roble Macizo y Tela Antimanchas',
@@ -212,7 +212,7 @@ export const products: Product[] = [
   },
   {
     id: 'silla-amara-2',
-    name: 'Silla Amara 2',
+    name: 'Silla Galbée',
     description:
       'Silla nórdica de comedor fabricada en haya natural con patas cónicas y asiento acolchado en cuero genuino curtido al vegetal. Ensamble mortaja y espiga de alta resistencia. Diseño atemporal de inspiración escandinava.',
     material: 'Haya Natural y Cuero Genuino',
@@ -229,7 +229,7 @@ export const products: Product[] = [
   },
   {
     id: 'silla-amara-3',
-    name: 'Silla Amara 3',
+    name: 'Silla Régence',
     description:
       'Silla de comedor con estructura de madera lacada en blanco mate y asiento tapizado en terciopelo azul marino. Respaldo con curva anatómica y patas de sección cuadrada. Ideal para comedores de estilo contemporáneo o glam.',
     material: 'Madera Lacada y Terciopelo',
@@ -248,7 +248,7 @@ export const products: Product[] = [
   // ── Camas ─────────────────────────────────────────────────────────────────
   {
     id: 'cama-amara-1',
-    name: 'Cama Amara 1',
+    name: 'Cama Paneles Urban',
     description:
       'Cama matrimonial con cabecera tapizada en tela bouclé crema y estructura de madera maciza nacional. Base con cajones de almacenamiento integrados y láminas de soporte reforzadas. Diseño cálido y funcional para el dormitorio moderno.',
     material: 'Madera Maciza y Tela Bouclé',
@@ -266,7 +266,7 @@ export const products: Product[] = [
   },
   {
     id: 'cama-amara-2',
-    name: 'Cama Amara 2',
+    name: 'Cama Real Colonial',
     description:
       'Cama de dos plazas con cabecera de tablillas en roble natural y base plataforma de perfil bajo. Estructura sólida con soporte central de refuerzo. Acabado en aceite de linaza que resalta la veta natural de la madera.',
     material: 'Roble Natural',
@@ -283,7 +283,7 @@ export const products: Product[] = [
   },
   {
     id: 'cama-amara-3',
-    name: 'Cama Amara 3',
+    name: 'Cama Capitoné Royal',
     description:
       'Cama king size con cabecera tapizada en cuero genuino color camel y patas en madera torneada de cedro boliviano. Base box con altura regulable. Una pieza de autor que combina confort y elegancia para dormitorios de lujo.',
     material: 'Cuero Genuino y Cedro Boliviano',
@@ -299,7 +299,7 @@ export const products: Product[] = [
   },
   {
     id: 'cama-amara-4',
-    name: 'Cama Amara 4',
+    name: 'Cama Nova Gris',
     description:
       'Cama matrimonial de estilo rústico con cabecera y pie de cama en mara macho maciza con tallado artesanal. Base de listones de madera con separación óptima para la ventilación del colchón. Cada pieza es única por la naturaleza del material.',
     material: 'Mara Macho Maciza',
@@ -318,7 +318,7 @@ export const products: Product[] = [
   // ── Sillones ──────────────────────────────────────────────────────────────
   {
     id: 'sillon-amara-1',
-    name: 'Sillón Amara 1',
+    name: 'Sillón Riviera',
     description:
       'Sillón reclinable de relax tapizado en cuero genuino azul noche con sistema de inclinación progresiva manual. Descansabrazos anchos con costuras artesanales y base giratoria de nogal. Un punto focal de elegancia para la sala.',
     material: 'Cuero Genuino y Nogal',
@@ -335,7 +335,7 @@ export const products: Product[] = [
   },
   {
     id: 'sillon-amara-2',
-    name: 'Sillón Amara 2',
+    name: 'Sillón Atelier',
     description:
       'Sillón orejero estilo clásico tapizado en bouclé color crema con botones forrados artesanalmente. Estructura interna de caoba con patas torneadas a mano. Cojín de asiento en espuma de alta densidad para un descanso prolongado.',
     material: 'Tela Bouclé y Caoba',
@@ -352,7 +352,7 @@ export const products: Product[] = [
   },
   {
     id: 'sillon-amara-3',
-    name: 'Sillón Amara 3',
+    name: 'Sillón L\'Arc',
     description:
       'Sillón contemporáneo de una plaza tapizado en terciopelo esmeralda con cojines de plumas de alta densidad. Patas de metal en acabado dorado satinado. Una pieza de autor que añade sofisticación y color a cualquier espacio.',
     material: 'Terciopelo Esmeralda y Metal Dorado',

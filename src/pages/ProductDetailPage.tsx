@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MessageCircle, ShieldCheck, Truck } from 'lucide-react';
+import { MessageCircle, ShieldCheck } from 'lucide-react';
 import { Navbar } from '../components/organisms/Navbar';
 import { Footer } from '../components/organisms/Footer';
 import { Breadcrumbs } from '../components/atoms/Breadcrumbs';
@@ -200,10 +200,6 @@ const ProductDetailView: React.FC<{ product: Product }> = ({ product }) => {
 
             {/* Badges */}
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted text-foreground text-xs uppercase tracking-widest font-medium">
-                <Truck className="w-3.5 h-3.5 shrink-0" />
-                Envío Asegurado
-              </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted text-foreground text-xs uppercase tracking-widest font-medium">
                 <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
                 Garantía de Calidad

@@ -3,7 +3,6 @@ import {
   Ruler,
   Lightbulb,
   Hammer,
-  X,
 } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import { Helmet } from 'react-helmet-async';
@@ -11,6 +10,7 @@ import { Navbar } from "../components/organisms/Navbar";
 import { Footer } from "../components/organisms/Footer";
 import { Breadcrumbs } from "../components/atoms/Breadcrumbs";
 import { Reveal } from "../components/atoms/Reveal";
+import { Lightbox } from "../components/atoms/Lightbox";
 import { WHATSAPP_NUMBER } from "../config";
 import { faqSchema, injectJsonLd } from "../lib/schema";
 
@@ -368,32 +368,11 @@ export function ServiciosPage() {
 
       {/* ── Lightbox ─────────────────────────────────────────────────── */}
       {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
-          role="dialog"
-          aria-modal="true"
-          aria-label={lightbox.alt}
-        >
-          <div
-            className="absolute inset-0 bg-foreground/90 cursor-pointer"
-            onClick={closeLightbox}
-          />
-          <div className="relative max-w-5xl w-full max-h-[90vh] animate-[fadeUp_0.3s_cubic-bezier(0.22,1,0.36,1)_both]">
-            <button
-              type="button"
-              onClick={closeLightbox}
-              className="absolute -top-12 right-0 text-primary-foreground hover:text-primary-foreground/70 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Cerrar"
-            >
-              <X className="w-7 h-7" />
-            </button>
-            <img
-              src={lightbox.src}
-              alt={lightbox.alt}
-              className="w-full h-auto max-h-[85vh] object-contain rounded-sm"
-            />
-          </div>
-        </div>
+        <Lightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={closeLightbox}
+        />
       )}
     </div>
   );

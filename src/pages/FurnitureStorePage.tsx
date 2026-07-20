@@ -7,6 +7,7 @@ import { FeaturedProducts } from '../components/organisms/FeaturedProducts';
 import { ShopGrid } from '../components/organisms/ShopGrid';
 import { BrandStory } from '../components/organisms/BrandStory';
 import { ProcessSection } from '../components/organisms/ProcessSection';
+import { ShowroomSection } from '../components/organisms/ShowroomSection';
 import { B2BSection } from '../components/organisms/B2BSection';
 import { TestimonialsSection } from '../components/organisms/TestimonialsSection';
 import { ContactSection } from '../components/organisms/ContactSection';
@@ -27,6 +28,7 @@ export function FurnitureStorePage() {
         <ShopGrid />
         <BrandStory />
         <ProcessSection />
+        <ShowroomSection />
         <B2BSection />
         <TestimonialsSection />
         <ContactSection />
